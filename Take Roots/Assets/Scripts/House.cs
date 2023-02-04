@@ -5,6 +5,7 @@ using UnityEngine;
 public class House : MonoBehaviour
 {
     [SerializeField] private GameObject interactButton;
+    [SerializeField] private List<Dialogue> houseDialoguesList = new List<Dialogue>();
 
     private void Start()
     {
@@ -12,4 +13,9 @@ public class House : MonoBehaviour
     }
 
     public void SetActiveInteractButton(bool active) => interactButton.SetActive(active);
+
+    public void interact()
+    {
+        Debug.Log("funziono");
+    }
 }
