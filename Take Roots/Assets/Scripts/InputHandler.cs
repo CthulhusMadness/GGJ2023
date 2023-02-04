@@ -3,8 +3,22 @@ using UnityEngine;
 
 public class InputHandler : MonoBehaviour
 {
+    public enum EInputType
+    {
+        Movement,
+        Interaction
+    }
+
+    public EInputType InputType;
+
     [SerializeField] private float speed = 10f;
     private int movementDir = 0;
+
+
+    private void Start()
+    {
+        InputType = EInputType.Movement;
+    }
 
     private void Update()
     {
