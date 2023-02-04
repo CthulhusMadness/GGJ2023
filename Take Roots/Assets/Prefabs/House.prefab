@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8716499388598296072}
   - component: {fileID: 8716499388598296079}
+  - component: {fileID: 969216592070211805}
   m_Layer: 7
-  m_Name: Collider
+  m_Name: DoorCollider
   m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,6 +59,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &969216592070211805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8716499388598296073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538248b03d8ac09498d107ce9ec04596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  house: {fileID: 8716499389937080291}
 --- !u!1 &8716499388841710531
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,3 +663,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactButton: {fileID: 8716499389457878178}
+  houseDialoguesList: []
