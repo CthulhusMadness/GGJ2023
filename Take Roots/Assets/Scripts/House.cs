@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class House : MonoBehaviour
 {
+    [SerializeField] private Neighbor neighbor;
+    [SerializeField] private Transform playerPoint;
     [SerializeField] private GameObject interactButton;
     [SerializeField] private List<Dialogue> houseDialoguesList = new List<Dialogue>();
 
