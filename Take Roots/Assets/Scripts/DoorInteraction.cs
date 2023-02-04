@@ -2,22 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInteraction : MonoBehaviour
+public class DoorInteraction : MonoBehaviour
 {
+    [SerializeField] private House house;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("House"))
+        if (collision.CompareTag("Player"))
         {
-            collision.GetComponentInParent<House>().SetActiveInteractButton(true);
+            house.SetActiveInteractButton(true);
             Debug.Log("House touched");
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("House"))
+        if (collision.CompareTag("Player"))
         {
-            collision.GetComponentInParent<House>().SetActiveInteractButton(false);
+            house.SetActiveInteractButton(false);
             Debug.Log("House exit");
         }
     }
