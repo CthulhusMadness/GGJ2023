@@ -21,8 +21,18 @@ public class House : MonoBehaviour
 
     public void SetActiveInteractButton(bool active) => interactButton.SetActive(active);
 
-    public void interact()
+    public void StartInteraction(Player player)
     {
-        Debug.Log("funziono");
+        Debug.Log("Start interact");
+        neighbor.SetActive(true);
+        player.transform.position = playerPoint.position;
+        OnStartInteraction?.Invoke();
+    }
+
+    public void EndInteraction()
+    {
+        Debug.Log("End interaction");
+        neighbor.SetActive(false);
+        OnEndInteraction?.Invoke();
     }
 }
