@@ -51,7 +51,7 @@ public class InteractionManager : Singleton<InteractionManager>
     {
         if (currentHouse != null)
         {
-            cameraManager.SetTarget(player.transform);
+            cameraManager.SetTarget(player.cameraTarget);
             cameraManager.Zoom(false);
         }
     }
