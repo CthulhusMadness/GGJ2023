@@ -7,8 +7,4 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance { get; private set; }
     private ScoreManager scoreManager = ScoreManager.Instance;
 
-    public Dialogue chooseDialogue()
-    {
-        if(scoreManager.getBirdScore())
-    }
 }
