@@ -29,9 +29,14 @@ public class CameraManager : MonoBehaviour
 
     private void FollowTarget()
     {
-        Vector3 movementDir = new Vector3(transform.position.x - target.position.x, 0, 0);
-        if (Mathf.Abs(transform.position.x - target.position.x) > 0)
-            transform.Translate(-Vector3.right * moveSpeed * movementDir.x, Space.World);
+        Vector2 movementDir = transform.position - target.position;
+        Debug.Log(movementDir.magnitude);
+        if (movementDir.magnitude > 0)
+        {
+            var newPos = Vector3.MoveTowards(transform.position, target.position, moveSpeed * movementDir.magnitude);
+            newPos.z = -10f;
+            transform.position = newPos;
+        }
     }
 
     public void Zoom(bool zoomIn)
