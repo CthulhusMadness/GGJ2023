@@ -6,6 +6,9 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private Transform target;
     [SerializeField] private float moveSpeed;
+    [Header("Zoom")]
+    [SerializeField] private float maxOrthographicSize = 5f;
+    [SerializeField] private float minOrthographicSize = 3f;
     [SerializeField] private float zoomSpeedMultiplier;
     [SerializeField] private AnimationCurve zoomCurve;
 
@@ -13,7 +16,7 @@ public class CameraManager : MonoBehaviour
 
     private void Start()
     {
-        cam.orthographicSize = 5f;
+        cam.orthographicSize = maxOrthographicSize;
     }
 
     // Update is called once per frame
@@ -21,6 +24,8 @@ public class CameraManager : MonoBehaviour
     {
         FollowTarget();
     }
+
+    public void SetTarget(Transform newTarget) => target = newTarget;
 
     private void FollowTarget()
     {
@@ -38,7 +43,7 @@ public class CameraManager : MonoBehaviour
 
     private IEnumerator ZoomDelay(bool zoomIn)
     {
-        float sizeTarget = zoomIn ? 3f : 5f;
+        float sizeTarget = zoomIn ? minOrthographicSize : maxOrthographicSize;
 
         float timer = 0f;
         float curveValue = 0f;
