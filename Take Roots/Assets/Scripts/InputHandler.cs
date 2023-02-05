@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using static InteractionManager;
 
 public class InputHandler : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class InputHandler : MonoBehaviour
     private int movementDir = 0;
 
     public event Func<bool> OnInteract;
-    public event Action OnEndInteract;
+    public event Action<EDirection> OnChangeChoise;
+    public event Action OnSelectChoise;
 
     private void Start()
     {
@@ -49,10 +51,17 @@ public class InputHandler : MonoBehaviour
         }
         else if (InputType == EInputType.Interaction)
         {
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                OnChangeChoise?.Invoke(EDirection.Up);
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                OnChangeChoise?.Invoke(EDirection.Down);
+            }
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                OnEndInteract?.Invoke();
-                ChangeInputType(EInputType.Movement);
+                OnSelectChoise?.Invoke();
             }
         }
     }

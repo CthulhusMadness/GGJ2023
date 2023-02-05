@@ -5,10 +5,17 @@ using UnityEngine;
 
 public class House : MonoBehaviour
 {
-    [SerializeField] private Neighbor neighbor;
+    public bool IsInteracting = false;
+
+    public Neighbor neighbor;
+    public DialogueHandler dialogueHandler;
+    public Transform cameraPoint;
     [SerializeField] private Transform playerPoint;
     [SerializeField] private GameObject interactButton;
-    [SerializeField] private List<Dialogue> houseDialoguesList = new List<Dialogue>();
+    [SerializeField] private List<Dialogue> houseDialogues = new List<Dialogue>();
+
+    private Dialogue currentDialogue = null;
+    public Dialogue CurrentDialogue => currentDialogue;
 
     public event Action OnStartInteraction;
     public event Action OnEndInteraction;
@@ -16,23 +23,42 @@ public class House : MonoBehaviour
     private void Start()
     {
         SetActiveInteractButton(false);
-        neighbor.SetActive(false);
+        neighbor.gameObject.SetActive(false);
+        IsInteracting = false;
+        currentDialogue = null;
     }
 
-    public void SetActiveInteractButton(bool active) => interactButton.SetActive(active);
+    public void SetActiveInteractButton(bool active)
+    {
+        if (GetAvailableDialogue() != null)
+            interactButton.SetActive(active);
+    }
 
     public void StartInteraction(Player player)
     {
-        Debug.Log("Start interact");
-        neighbor.SetActive(true);
-        player.transform.position = playerPoint.position;
-        OnStartInteraction?.Invoke();
+        currentDialogue = GetAvailableDialogue();
+        if (currentDialogue != null)
+        {
+            neighbor.gameObject.SetActive(true);
+            dialogueHandler.Initialize(currentDialogue.getData());
+            player.transform.position = playerPoint.position;
+            OnStartInteraction?.Invoke();
+        }
     }
 
-    public void EndInteraction()
+    public void EndInteraction(bool setDialogeUsed)
     {
-        Debug.Log("End interaction");
-        neighbor.SetActive(false);
+        neighbor.gameObject.SetActive(false);
+        currentDialogue.setUsed(setDialogeUsed);
         OnEndInteraction?.Invoke();
+        if (GetAvailableDialogue() == null)
+        {
+            // Disable interaction with door
+        }
+    }
+
+    public Dialogue GetAvailableDialogue()
+    {
+        return houseDialogues.Find(d => !d.getUsed());
     }
 }
