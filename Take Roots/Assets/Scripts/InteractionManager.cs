@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class InteractionManager : Singleton<InteractionManager>
 {
     public enum EDirection
@@ -12,8 +10,12 @@ public class InteractionManager : Singleton<InteractionManager>
     public House currentHouse;
     public CameraManager cameraManager;
 
+    private const int MaxInteractionsPerDay = 3;
+    public int interactionsCount = 0;
+
     private void Start()
     {
+        OnStartDay();
         player.inputHandler.OnInteract += OnInteract;
         player.inputHandler.OnChangeChoise += ChangeChoise;
         player.inputHandler.OnSelectChoise += SelectChoise;
@@ -26,33 +28,41 @@ public class InteractionManager : Singleton<InteractionManager>
         player.inputHandler.OnSelectChoise -= SelectChoise;
     }
 
+    public void OnStartDay()
+    {
+        interactionsCount = 0;
+    }
+
     public void SetCurrentHouse(House house)
     {
-        if (currentHouse != null)
-            currentHouse.OnEndInteraction -= OnEndInteract;
         currentHouse = house;
-        if (currentHouse != null)
-            currentHouse.OnEndInteraction += OnEndInteract;
     }
 
     private bool OnInteract()
     {
-        if (currentHouse != null && currentHouse.GetAvailableDialogue() != null)
+        if (interactionsCount < MaxInteractionsPerDay)
         {
-            currentHouse.StartInteraction(player);
-            cameraManager.SetTarget(currentHouse.cameraPoint);
-            cameraManager.Zoom(true);
-            return true;
+            if (currentHouse != null && currentHouse.GetAvailableDialogue() != null)
+            {
+                currentHouse.StartInteraction(player);
+                cameraManager.SetTarget(currentHouse.cameraPoint);
+                cameraManager.Zoom(true);
+                return true;
+            }
         }
         return false;
     }
 
-    private void OnEndInteract()
+    private void OnEndInteract(bool isInteractionCompleted)
     {
         if (currentHouse != null)
         {
             cameraManager.SetTarget(player.cameraTarget);
             cameraManager.Zoom(false);
+            if (isInteractionCompleted)
+                interactionsCount++;
+            if (interactionsCount >= MaxInteractionsPerDay)
+                SceneManager.Instance.ChangeScene();
         }
     }
 
@@ -77,6 +87,7 @@ public class InteractionManager : Singleton<InteractionManager>
 
             currentHouse.EndInteraction(choise.IsAnswer);
             player.inputHandler.ChangeInputType(InputHandler.EInputType.Movement);
+            OnEndInteract(choise.IsAnswer);
         }
     }
 }
