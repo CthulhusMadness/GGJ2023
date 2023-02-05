@@ -102,7 +102,7 @@ MonoBehaviour:
   moveSpeed: 5
   maxOrthographicSize: 9
   minOrthographicSize: 5
-  zoomSpeedMultiplier: 1
+  zoomSpeedMultiplier: 0.04
   zoomCurve:
     serializedVersion: 2
     m_Curve:

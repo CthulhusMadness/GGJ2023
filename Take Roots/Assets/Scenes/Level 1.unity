@@ -287,6 +287,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Day: 1
+  birdScore: 0
+  dogScore: 0
+  cowScore: 0
 --- !u!4 &889870496
 Transform:
   m_ObjectHideFlags: 0
@@ -493,7 +496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   nextScene: Level 2
-  changeSceneDelay: 2
+  changeSceneDelay: 3
 --- !u!4 &1215263842
 Transform:
   m_ObjectHideFlags: 0
@@ -708,7 +711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2830431367070484879, guid: 3836ebd0115960b45af8ed8f04fddd73, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2830431367494640104, guid: 3836ebd0115960b45af8ed8f04fddd73, type: 3}
       propertyPath: fadeDuration

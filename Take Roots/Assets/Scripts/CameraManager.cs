@@ -33,7 +33,7 @@ public class CameraManager : MonoBehaviour
         Debug.Log(movementDir.magnitude);
         if (movementDir.magnitude > 0)
         {
-            var newPos = Vector3.MoveTowards(transform.position, target.position, moveSpeed * movementDir.magnitude);
+            var newPos = Vector3.MoveTowards(transform.position, target.position, moveSpeed * (movementDir.magnitude / 2));
             newPos.z = -10f;
             transform.position = newPos;
         }
