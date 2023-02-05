@@ -6,6 +6,22 @@ using UnityEngine;
 [Serializable]
 public class Dialogue
 {
-    public DialogueData data;
-    public bool used;
+    [SerializeField] private DialogueData data;
+    [SerializeField] private bool used;
+
+
+    public bool getUsed()
+    {
+        return used;
+    }
+
+    public void setUsed(bool u)
+    {
+        used = u;
+    }
+
+    public DialogueData getData()
+    {
+        return data;
+    }
 }

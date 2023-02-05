@@ -7,8 +7,22 @@ public class DialogueData : ScriptableObject
 {
     public float typingSpeed = .1f;
     [Multiline(10)]
-    public string text;
-    public string firstChoice;
-    public string secondChoice;
-    public string thirdChoice;
+    [SerializeField] private string text;
+    [SerializeField] private DialogueChoice firstChoice;
+    [SerializeField] private DialogueChoice secondChoice;
+
+    public string getText()
+    {
+        return text;
+    }
+
+    public string getFirstChoice()
+    {
+        return firstChoice;
+    }
+
+    public string getSecondChoice()
+    {
+        return secondChoice;
+    }
 }
