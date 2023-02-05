@@ -86,8 +86,16 @@ public class InteractionManager : Singleton<InteractionManager>
                 choise = currentHouse.CurrentDialogue.getData().ThirdChoise;
 
             currentHouse.EndInteraction(choise.IsAnswer);
+            UpdateScores(choise);
             player.inputHandler.ChangeInputType(InputHandler.EInputType.Movement);
             OnEndInteract(choise.IsAnswer);
         }
+    }
+
+    public void UpdateScores(DialogueChoice choise)
+    {
+        GameManager.Instance.setBirdScore(choise.BirdScore);
+        GameManager.Instance.setCowScore(choise.CowScore);
+        GameManager.Instance.setDogScore(choise.DogScore);
     }
 }
