@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InteractionManager : Singleton<InteractionManager>
 {
     public Player player;
     public House currentHouse;
+    public CameraManager cameraManager;
 
     private void Start()
     {
@@ -29,6 +28,7 @@ public class InteractionManager : Singleton<InteractionManager>
         if (currentHouse != null)
         {
             currentHouse.StartInteraction(player);
+            cameraManager.Zoom(true);
             return true;
         }
         return false;
@@ -39,6 +39,7 @@ public class InteractionManager : Singleton<InteractionManager>
         if (currentHouse != null)
         {
             currentHouse.EndInteraction();
+            cameraManager.Zoom(false);
         }
     }
 }
