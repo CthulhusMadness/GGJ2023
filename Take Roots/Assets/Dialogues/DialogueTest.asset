@@ -10,26 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad2dc5b3e3b5e3b47ad083d9fff28889, type: 3}
-  m_Name: Dialogue 3
+  m_Name: DialogueTest
   m_EditorClassIdentifier: 
-  typingSpeed: 0.03
-  text: Have you heard about herbivores? They keep complaining about the lack of
-    food and water! They are always so catastrophic, here no one has ever been left
-    with empty stomach.
+  typingSpeed: 0.05
+  text: 'Hello!
+
+    This is my first dialogue, I hope this goes well!
+
+    Anyway,
+    how was your day?'
   firstChoice:
-    Text: 
+    Text: I feel great!
     BirdScore: 0
     DogScore: 0
     CowScore: 0
     IsAnswer: 1
   secondChoice:
-    Text: 
+    Text: I just want to go to bed...
     BirdScore: 0
     DogScore: 0
     CowScore: 0
     IsAnswer: 1
   thirdChoice:
-    Text: Lets's talk later
+    Text: Let's talk later
     BirdScore: 0
     DogScore: 0
     CowScore: 0

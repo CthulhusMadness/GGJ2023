@@ -12,9 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2dc5b3e3b5e3b47ad083d9fff28889, type: 3}
   m_Name: Dialogue 0
   m_EditorClassIdentifier: 
-  text: 'Welcome in this neighbourhood my dear, when the sun goes down we will hold
-    a lavish buffet very fars from here but we can give you a lift since we can fly
-    everywhere. Would you like to join us? '
-  firstChoice: Oooh, you'are very kind to invite me, I really would like to join
-  secondChoice: Ooooh, you'are very kind to invite me, but unfortunately I'm very
-    busy tonight. It'll be for another time.
+  typingSpeed: 0.03
+  text: Welcome to this neighborhood my dear, my friends and I will hold a lavish
+    buffet at sunset. It is quite far from here but we can give you a lift since
+    we can fly everywhere. Would you like to join us?
+  firstChoice:
+    Text: "Oh, very kind of you!, I\u2019d like to join"
+    BirdScore: 20
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 1
+  secondChoice:
+    Text: Oh,I'm very busy tonight. Maybe next time.
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 1
+  thirdChoice:
+    Text: Lets's talk later
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 0

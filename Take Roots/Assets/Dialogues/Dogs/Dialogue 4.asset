@@ -12,9 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2dc5b3e3b5e3b47ad083d9fff28889, type: 3}
   m_Name: Dialogue 4
   m_EditorClassIdentifier: 
+  typingSpeed: 0.03
   text: Those noisy volatiles keep singing everynight and don't let us sleep properly,
     help us to build a scarecrow.
-  firstChoice: I'm dealing with your same problem, it's time to scare them a little
-    bit
-  secondChoice: Oh, I understand you.. but I don't feel comfy to act like this, i'm
-    so sorry.
+  firstChoice:
+    Text: 
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 1
+  secondChoice:
+    Text: 
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 1
+  thirdChoice:
+    Text: Lets's talk later
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 0

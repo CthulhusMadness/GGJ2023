@@ -12,8 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2dc5b3e3b5e3b47ad083d9fff28889, type: 3}
   m_Name: Dialogue 2
   m_EditorClassIdentifier: 
+  typingSpeed: 0.03
   text: 'This night we''re going to dampen our feathers in the spa. Does it suit
     you? '
-  firstChoice: In the spa?? WOOW I'll go and get my costume right now
-  secondChoice: Mmmh, I don't know if It's a good idea for me. Some people speaking
-    about an imminent drought
+  firstChoice:
+    Text: 
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 1
+  secondChoice:
+    Text: 
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 1
+  thirdChoice:
+    Text: Lets's talk later
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 0

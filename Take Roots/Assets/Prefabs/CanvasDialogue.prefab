@@ -87,7 +87,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &1987809870253029503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
   - {fileID: 2447353153783922835}
   - {fileID: 5841760997544508530}
   - {fileID: 9023181707642626210}
+  isDialogeReady: 0
   currentChoiseIndex: 0
 --- !u!1 &1987809871489109294
 GameObject:
@@ -322,8 +323,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.35
-  m_fontSizeBase: 0.4
+  m_fontSize: 0.3
+  m_fontSizeBase: 0.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -494,6 +495,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Choise1
       objectReference: {fileID: 0}
+    - target: {fileID: 5855405248080108250, guid: 122e9a08431530a4aacb55682c7f30fa, type: 3}
+      propertyPath: m_fontSize
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5855405248080108250, guid: 122e9a08431530a4aacb55682c7f30fa, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.24
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 122e9a08431530a4aacb55682c7f30fa, type: 3}
 --- !u!114 &2447353153783922835 stripped
@@ -615,6 +624,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Choise 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5855405248080108250, guid: 122e9a08431530a4aacb55682c7f30fa, type: 3}
+      propertyPath: m_fontSize
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5855405248080108250, guid: 122e9a08431530a4aacb55682c7f30fa, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.24
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 122e9a08431530a4aacb55682c7f30fa, type: 3}
 --- !u!224 &4956587441901964558 stripped
@@ -735,6 +752,14 @@ PrefabInstance:
     - target: {fileID: 5855405248080108250, guid: 122e9a08431530a4aacb55682c7f30fa, type: 3}
       propertyPath: m_text
       value: Choise 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5855405248080108250, guid: 122e9a08431530a4aacb55682c7f30fa, type: 3}
+      propertyPath: m_fontSize
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5855405248080108250, guid: 122e9a08431530a4aacb55682c7f30fa, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 122e9a08431530a4aacb55682c7f30fa, type: 3}

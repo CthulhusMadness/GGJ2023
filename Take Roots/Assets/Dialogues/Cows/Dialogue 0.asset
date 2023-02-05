@@ -12,9 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2dc5b3e3b5e3b47ad083d9fff28889, type: 3}
   m_Name: Dialogue 0
   m_EditorClassIdentifier: 
-  text: Hey, welcome! Here we're very socially active, we care about the connection
-    with the nature. Tonight we're projecting a movie about rights of the poor spotted
-    rabbits. Let's join us.
-  firstChoice: It seems very interesting, I'll join you for sure
-  secondChoice: Oooh It seems very interesting, but unfortunetly I have other plans
-    for the night
+  typingSpeed: 0.03
+  text: Oh Welcome! Our group is very socially active. We care about everything that
+    connects with nature. Tonight we're planning a movie! It is about the rights
+    of the poor spotted rabbits. Join us!
+  firstChoice:
+    Text: "How interesting I\u2019m happy to join you"
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 20
+    IsAnswer: 1
+  secondChoice:
+    Text: Oh cool! Unfortunately I have other plans for the night
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 1
+  thirdChoice:
+    Text: Lets's talk later
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 0

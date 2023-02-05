@@ -12,7 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2dc5b3e3b5e3b47ad083d9fff28889, type: 3}
   m_Name: Dialogue 1
   m_EditorClassIdentifier: 
-  text: Hey my friend, tonight we take a meeting to speak about this possible upcoming
-    drought, do you come?
-  firstChoice: A drought??? Are you serious?? I'm definitely in.
-  secondChoice: A drought??? Are you sure?? I don't know, I'm very busy tonight btw
+  typingSpeed: 0.03
+  text: "Hey my friend, tonight we\u2019ll have a meeting to speak about the upcoming
+    drought. Join us!"
+  firstChoice:
+    Text: A drought??? Are you serious?? Count me in.
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 10
+    IsAnswer: 1
+  secondChoice:
+    Text: A drought??? I don't know, I'm very busy tonight.
+    BirdScore: 0
+    DogScore: 0
+    CowScore: -5
+    IsAnswer: 1
+  thirdChoice:
+    Text: Lets's talk later
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 0

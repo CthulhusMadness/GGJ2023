@@ -12,8 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2dc5b3e3b5e3b47ad083d9fff28889, type: 3}
   m_Name: Dialogue 0
   m_EditorClassIdentifier: 
-  text: 'Heeeey, Hello What''s up?? Are you new around here? Here is famous for great
-    eating and drinking. Tonight I''m going to have a dinner in a very good restaurant,
-    wanna come?  '
-  firstChoice: Oh I love good food and drink, I'm in! Please, book for me too
-  secondChoice: Oh thank you for inviting me, but I don't think I'll be able to come.
+  typingSpeed: 0.03
+  text: 'Hey, wassup dude??? You new around here?
+
+    Food and drinks are terrific
+    in this town! I know a very good restaurant, wanna come?
+
+'
+  firstChoice:
+    Text: Oh I love good food, I'm in!
+    BirdScore: 0
+    DogScore: 20
+    CowScore: 0
+    IsAnswer: 1
+  secondChoice:
+    Text: Thanks for the invitation, but I don't think I'll be able to come.
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 1
+  thirdChoice:
+    Text: Lets's talk later
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 0

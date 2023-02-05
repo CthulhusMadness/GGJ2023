@@ -12,7 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2dc5b3e3b5e3b47ad083d9fff28889, type: 3}
   m_Name: Dialogue 4
   m_EditorClassIdentifier: 
+  typingSpeed: 0.03
   text: We're looking for stronge arms. We're raising a glorious golden wall, can
     you help us?  The ideal place to perch and brown our feathers
-  firstChoice: 'Amazing, I can''t wait to work for it '
-  secondChoice: ' What?? Are you crazy?? I don''t think I can be helpful'
+  firstChoice:
+    Text: 
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 1
+  secondChoice:
+    Text: 
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 1
+  thirdChoice:
+    Text: Lets's talk later
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 0

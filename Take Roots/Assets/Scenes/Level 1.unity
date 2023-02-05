@@ -596,6 +596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: House4
       objectReference: {fileID: 0}
+    - target: {fileID: 7935363023987682902, guid: ea9306f0e18fd0a43b6b466dc17961e8, type: 3}
+      propertyPath: houseDialogues.Array.data[0].data
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d799265b62bc6c4b8939d980233a424, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea9306f0e18fd0a43b6b466dc17961e8, type: 3}
 --- !u!4 &1876251895337385786 stripped
@@ -702,9 +706,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 2830431367070484879, guid: 3836ebd0115960b45af8ed8f04fddd73, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2830431367494640104, guid: 3836ebd0115960b45af8ed8f04fddd73, type: 3}
       propertyPath: fadeDuration
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2830431367494640104, guid: 3836ebd0115960b45af8ed8f04fddd73, type: 3}
       propertyPath: textFadeDuration
@@ -731,6 +739,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6939721828195395903, guid: 80ba731b888df7243aac006994af3d41, type: 3}
+      propertyPath: houseDialogues.Array.data[0].data
+      value: 
+      objectReference: {fileID: 11400000, guid: 903a33ea708fb4949a95063e4c16a75b, type: 2}
     - target: {fileID: 6939721828195395904, guid: 80ba731b888df7243aac006994af3d41, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -805,6 +817,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4246524423027853858, guid: 4f708a6b48019bb4796a6eed30c41e9d, type: 3}
+      propertyPath: houseDialogues.Array.data[0].data
+      value: 
+      objectReference: {fileID: 11400000, guid: 903a33ea708fb4949a95063e4c16a75b, type: 2}
     - target: {fileID: 4246524423027853917, guid: 4f708a6b48019bb4796a6eed30c41e9d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -941,6 +957,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3888191512672393239, guid: e6f9ce573ee4929478e6100f69176086, type: 3}
+      propertyPath: houseDialogues.Array.data[0].data
+      value: 
+      objectReference: {fileID: 11400000, guid: 78d30fb154c4bc648a6dafc48baaafe1, type: 2}
     - target: {fileID: 3888191512672393320, guid: e6f9ce573ee4929478e6100f69176086, type: 3}
       propertyPath: m_RootOrder
       value: 2

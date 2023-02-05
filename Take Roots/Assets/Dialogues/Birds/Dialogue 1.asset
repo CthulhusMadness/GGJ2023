@@ -12,8 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2dc5b3e3b5e3b47ad083d9fff28889, type: 3}
   m_Name: Dialogue 1
   m_EditorClassIdentifier: 
-  text: We're planning a badminton match on clouds, would that appeal to you?
-  firstChoice: Of course, in my previous hometown we were used to play badminton
-    every sunday
-  secondChoice: Ooh I'm sorry but It's not the kind of sport I'm used to practice,
-    I think I will skip
+  typingSpeed: 0.03
+  text: "We're planning a badminton match on clouds, would that appeal to you?\r"
+  firstChoice:
+    Text: Of course, I used to play badminton every sunday
+    BirdScore: 10
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 1
+  secondChoice:
+    Text: Ooh I'm sorry but It's not my thing. I think I will skip this
+    BirdScore: -5
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 1
+  thirdChoice:
+    Text: Lets's talk later
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 0

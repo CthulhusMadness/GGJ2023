@@ -12,7 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2dc5b3e3b5e3b47ad083d9fff28889, type: 3}
   m_Name: Dialogue 1
   m_EditorClassIdentifier: 
-  text: I was thinking about baking a berries and indifference cake, do you wanna
-    come inside and taste a piece?
-  firstChoice: Uuuh, It's my favorite flavour, i'll be there asap
-  secondChoice: Mmmh I'm allergic to the indifference
+  typingSpeed: 0.03
+  text: I was thinking about baking a Berries-And-Indifference Cake. Come in and
+    take a bite?
+  firstChoice:
+    Text: Uuuh, my absolute favorite, i'll be there asap
+    BirdScore: 0
+    DogScore: 10
+    CowScore: 0
+    IsAnswer: 1
+  secondChoice:
+    Text: Mmmh I'm allergic to indifference
+    BirdScore: 0
+    DogScore: -5
+    CowScore: 0
+    IsAnswer: 1
+  thirdChoice:
+    Text: Lets's talk later
+    BirdScore: 0
+    DogScore: 0
+    CowScore: 0
+    IsAnswer: 0
