@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
-public class DialogueChoice : MonoBehaviour
+[Serializable]
+public class DialogueChoice
 {
-    [SerializeField] private string text;
-    [SerializeField] private int birdScore;
-    [SerializeField] private int dogScore;
-    [SerializeField] private int cowScore;
-
+    public string Text;
+    public int BirdScore;
+    public int DogScore;
+    public int CowScore;
+    public bool IsAnswer;
 }
