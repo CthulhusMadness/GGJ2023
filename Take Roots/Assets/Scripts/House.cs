@@ -30,8 +30,7 @@ public class House : MonoBehaviour
 
     public void SetActiveInteractButton(bool active)
     {
-        if (GetAvailableDialogue() != null)
-            interactButton.SetActive(active);
+        interactButton.SetActive(active && GetAvailableDialogue() != null);
     }
 
     public void StartInteraction(Player player)
