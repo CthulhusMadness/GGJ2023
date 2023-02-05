@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2dc5b3e3b5e3b47ad083d9fff28889, type: 3}
+  m_Name: Dialogue 0
+  m_EditorClassIdentifier: 
+  text: 'Heeeey, Hello What''s up?? Are you new around here? Here is famous for great
+    eating and drinking. Tonight I''m going to have a dinner in a very good restaurant,
+    wanna come?  '
+  firstChoice: Oh I love good food and drink, I'm in! Please, book for me too
+  secondChoice: Oh thank you for inviting me, but I don't think I'll be able to come.

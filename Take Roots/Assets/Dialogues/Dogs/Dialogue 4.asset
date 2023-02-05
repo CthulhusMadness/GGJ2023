@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2dc5b3e3b5e3b47ad083d9fff28889, type: 3}
+  m_Name: Dialogue 4
+  m_EditorClassIdentifier: 
+  text: Those noisy volatiles keep singing everynight and don't let us sleep properly,
+    help us to build a scarecrow.
+  firstChoice: I'm dealing with your same problem, it's time to scare them a little
+    bit
+  secondChoice: Oh, I understand you.. but I don't feel comfy to act like this, i'm
+    so sorry.

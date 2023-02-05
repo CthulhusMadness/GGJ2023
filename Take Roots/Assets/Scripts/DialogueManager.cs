@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static DialogueManager Instance { get; private set; }
+    private ScoreManager scoreManager = ScoreManager.Instance;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
