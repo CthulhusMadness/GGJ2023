@@ -10,6 +10,7 @@ public class DoorInteraction : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             house.SetActiveInteractButton(true);
+            InteractionManager.Instance.SetCurrentHouse(house);
             Debug.Log("House touched");
         }
     }
@@ -19,6 +20,7 @@ public class DoorInteraction : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             house.SetActiveInteractButton(false);
+            InteractionManager.Instance.SetCurrentHouse(null);
             Debug.Log("House exit");
         }
     }
