@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2dc5b3e3b5e3b47ad083d9fff28889, type: 3}
+  m_Name: Dialogue 1
+  m_EditorClassIdentifier: 
+  text: We're planning a badminton match on clouds, would that appeal to you?
+  firstChoice: Of course, in my previous hometown we were used to play badminton
+    every sunday
+  secondChoice: Ooh I'm sorry but It's not the kind of sport I'm used to practice,
+    I think I will skip
