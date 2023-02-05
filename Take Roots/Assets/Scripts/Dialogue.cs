@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dialogue : MonoBehaviour
+[Serializable]
+public class Dialogue
 {
     public DialogueData data;
     public bool used;
