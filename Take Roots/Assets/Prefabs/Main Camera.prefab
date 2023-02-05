@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 3992027291387502380}
   target: {fileID: 0}
-  moveSpeed: 5
+  moveSpeed: 0.7
   maxOrthographicSize: 9
   minOrthographicSize: 5
   zoomSpeedMultiplier: 0.04

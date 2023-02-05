@@ -13,8 +13,8 @@ public class SceneManager : Singleton<SceneManager>
 
     protected override void Awake()
     {
-        base.Awake();
         GameManager.Instance.Day = day;
+        base.Awake();
     }
 
     private void Start()

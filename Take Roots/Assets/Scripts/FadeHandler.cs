@@ -13,7 +13,7 @@ public class FadeHandler : MonoBehaviour
     [SerializeField] private float fadeDuration;
     [SerializeField] private float textFadeDuration;
 
-    private void Start()
+    private void OnEnable()
     {
         SceneManager.Instance.OnStartDay += Fade;
     }

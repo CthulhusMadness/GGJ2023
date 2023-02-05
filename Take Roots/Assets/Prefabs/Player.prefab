@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputType: 0
-  speed: 0.5
+  speed: 0.3
 --- !u!114 &5539783075489099801
 MonoBehaviour:
   m_ObjectHideFlags: 0

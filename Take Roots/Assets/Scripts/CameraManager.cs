@@ -30,7 +30,6 @@ public class CameraManager : MonoBehaviour
     private void FollowTarget()
     {
         Vector2 movementDir = transform.position - target.position;
-        Debug.Log(movementDir.magnitude);
         if (movementDir.magnitude > 0)
         {
             var newPos = Vector3.MoveTowards(transform.position, target.position, moveSpeed * (movementDir.magnitude / 2));
@@ -56,7 +55,6 @@ public class CameraManager : MonoBehaviour
         {
             timer += Time.fixedDeltaTime * zoomSpeedMultiplier;
             curveValue = zoomCurve.Evaluate(timer);
-            Debug.Log(curveValue);
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, sizeTarget, curveValue);
             yield return null;
         }
